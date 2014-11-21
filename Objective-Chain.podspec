@@ -13,5 +13,5 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/go886/Objective-Chain.git", :tag => "0.1.0" }
   s.source_files  = "Sources", "Sources/**/*.{h,m}"
   s.exclude_files = "Sources/Exclude"
-  s.requires_arc = true
+  s.platform = :ios, '5.0'
 end

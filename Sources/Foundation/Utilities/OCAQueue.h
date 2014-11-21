@@ -43,7 +43,7 @@ typedef void (^OCAQueueBlock)(void);
 
 @property (atomic, readonly, copy) NSString *name;
 @property (atomic, readonly, assign) BOOL isConcurrent;
-@property (atomic, readonly, strong) dispatch_queue_t dispatchQueue;
+@property (atomic, readonly, assign) dispatch_queue_t dispatchQueue;
 
 
 #pragma mark Adding Blocks to Queue
