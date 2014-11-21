@@ -12,6 +12,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/go886/Objective-Chain.git", :tag => "0.2.1" }
   s.requires_arc = true
-  s.source_files = "Sources", "Sources/**/*.{h,m}"
   s.ios.deployment_target = '5.0'
+  s.public_header_files = 'Sources/*.h'
+  s.source_files = 'Sources/ObjectiveChain.h'
 end
