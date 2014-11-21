@@ -40,6 +40,13 @@ _Pragma("clang diagnostic pop") \
 #define OCAT(TYPE)   @(@encode(TYPE))
 #define OCATypes(...)   ( [@[ __VA_ARGS__ ] componentsJoinedByString:@""] )
 
+#if OS_OBJECT_USE_OBJC
+#define OCADispatchQueueRelease(q)
+#define OCADispatchQueueSetterSementics strong
+#else
+#define OCADispatchQueueRelease(q) (dispatch_release(q))
+#define OCADispatchQueueSetterSementics assign
+#endif
 
 
 

@@ -21,7 +21,7 @@
 @interface OCATimer ()
 
 
-@property (atomic, readwrite, strong) dispatch_source_t timer;
+@property (atomic, readwrite, OCADispatchQueueSetterSementics) dispatch_source_t timer;
 @property (atomic, readwrite, assign) BOOL isRunning;
 
 @property (atomic, readwrite, assign) NSTimeInterval elapsedTime;
